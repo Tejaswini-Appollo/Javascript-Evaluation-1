@@ -1,11 +1,14 @@
-var num = 4;
-var count = 1;
-
-for(var i = num; i >= 1; i--) {
-    var space = "";
-    for(var j = i; j >= 1; j--) {
-        space += " ";
+let result = "";
+  let start = 1;
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5 - i; j++) {
+      result += " ";
     }
-    console.log(space + count + " ");
-    count += 1;
-}
+    for (let k = 1; k <= i - 1; k++) {
+      result += " " + start;
+      start++;
+    }
+    result += "\n";
+  }
+  console.log(result);
+
